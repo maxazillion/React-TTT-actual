@@ -12,7 +12,7 @@ const Square = ({ num, content, handler }) => (
 
 Square.propTypes = {
   num: PropTypes.number.isRequired,
-  content: PropTypes.oneOf(["X", "O"]),
+  content: PropTypes.oneOf(["X", "O", ""]),
   handler: PropTypes.func.isRequired,
 };
 

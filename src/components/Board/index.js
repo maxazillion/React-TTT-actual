@@ -8,7 +8,12 @@ const Board = () => {
   const [current, setCurrent] = useState("X");
 
   function handleClick(ev) {
-    console.log(ev.target);
+    setContents((prevContents) => {
+      const newContents = [...prevContents];
+      newContents[ev.target.dataset.num] = current;
+      setCurrent(current === "X" ? "O" : "X");
+      return [...newContents];
+    });
   }
 
   function renderSquares(sq) {
